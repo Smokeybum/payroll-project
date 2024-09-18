@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?office,workspace');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 bg-opacity-90 p-6 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Payroll Management System</h1>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="container mx-auto w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Add Employee</h2>
+            <form method="post">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 text-gray-700 font-medium">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter the name.." required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="contact" class="block mb-2 text-gray-700 font-medium">Contact:</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter the Contact No.." required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="salary" class="block mb-2 text-gray-700 font-medium">Salary:</label>
+                    <input type="number" id="salary" name="salary" step="0.01" placeholder="Enter net salary" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label for="department" class="block mb-2 text-gray-700 font-medium">Department:</label>
+                    <input type="text" id="department" name="department" placeholder="Enter Department" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-blue-600 rounded-md text-white hover:bg-blue-700 transition duration-300">Add
+                    Employee</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
