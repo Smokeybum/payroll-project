@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?corporate,office');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .backdrop {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-link {
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #1E3A8A;
+            /* Dark blue */
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .action-link:hover {
+            background-color: #1E3A8A;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 bg-opacity-90 p-6 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Payroll Management System</h1>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex items-center justify-center h-screen">
+        <div class="backdrop p-12 rounded-lg max-w-lg w-full text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Manage Employee Details</h2>
+
+            <div class="space-y-6">
+                <a href="{{ url_for('routes.view_employees') }}" class="action-link w-full">View Employee Details</a>
+                <a href="{{ url_for('routes.add_employee') }}" class="action-link w-full">Add Employee Details</a>
+                <!-- Replace 'id=1' with actual employee ID from context
+                <a href="{{ url_for('routes.update_employee', id=1) }}" class="action-link w-full">Update Employee
+                    Details</a> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
